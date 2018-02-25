@@ -18,9 +18,11 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class="btn btn-primary">
-                                Show Image
-                            </button>
+                            <div *ngIf='products && products.length'>
+                                <button class="btn btn-primary" (click)="toggleImage()">
+                                    {{showImage? 'Hide Image': 'Show Image'}}
+                                </button>
+                            </div>
                         </th>
                         <th>Product</th>
                         <th>Code</th>
@@ -29,8 +31,19 @@
                         <th>5 Star Rating</th>
                     </tr>
                 </thead>
-                <tbody>
-
+                <tbody *ngIf="products && products.length">
+                    <tr *ngFor="let product of products">
+                        <td style="height:72px;">
+                            <img [src]='product.ImageURL' [title]='product.Name' 
+                            [style.width.px]='imageWidth' [style.height.px]='imageWidth' 
+                            [style.margin.px]='imageMargin' *ngIf="showImage" />
+                        </td>
+                        <td>{{product.Name}}</td>
+                        <td>{{product.Code}}</td>
+                        <td>{{product.Available? 'Yes': 'No'}}</td>
+                        <td>{{product.Price}}</td>
+                        <td>{{product.Rating}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>

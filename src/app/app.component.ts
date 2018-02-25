@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'India shopping Mart';
+  menus: Array<string> = ['Home', 'Garments', 'Woman Dress Materials',
+   'Men Dress Materials', 'Kids Dress Materials',
+   'Kitchen Items', 'Sports Items'];
 }
