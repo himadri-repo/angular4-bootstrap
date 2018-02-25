@@ -42,7 +42,7 @@
                         <td>{{product.Code | ConvertToSpaces:'-' | lowercase}}</td>
                         <td>{{product.Available? 'Yes': 'No'}}</td>
                         <td>{{product.Price | currency: 'INR':true:'1.2-2'}}</td>
-                        <td>{{product.Rating}}</td>
+                        <td><app-star-rating [rating]='product.Rating'></app-star-rating></td>
                     </tr>
                 </tbody>
             </table>

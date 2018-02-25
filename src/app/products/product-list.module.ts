@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe';
+import { StarComponent } from '../shared/star.component';
 
 // This Module's Components
 import { ProductListComponent } from './product-list.component';
@@ -12,7 +13,7 @@ import { ProductListComponent } from './product-list.component';
         FormsModule, CommonModule
     ],
     declarations: [
-        ConvertToSpacesPipe, ProductListComponent,
+        ConvertToSpacesPipe, StarComponent, ProductListComponent,
     ],
     exports: [
         ProductListComponent,
