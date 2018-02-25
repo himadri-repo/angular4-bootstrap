@@ -4,15 +4,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## How to make Bootstrap project 
 
-1. npm install -g @angular/cli (This will install Angular CLI commandlet at global space)
-2. ng new mynewapplication (mynewapplication is just application name. ng is the Angular CLI command with new is argument to create new application/project. Like 'new' there are other command arguments also available, like 'generate', 'serve', 'test', 'lint', 'format')
-3. cd mynewapplication (After previous command new folder will be created as 'mynewapplication').
-4. npm install (Since there will be a file package.json, which will keep all dependencies. The above command will install all dependencies with this command)
-5. ng serve (Agular using HTTP as service, so by calling 'serve' command with '-o/-open' will serve the page in new browser window/tab. By default 4200 port will be used to serve).
+1. `npm install -g @angular/cli` (This will install Angular CLI commandlet at global space)
+2. `ng new mynewapplication` (mynewapplication is just application name. ng is the Angular CLI command with new is argument to create new application/project. Like 'new' there are other command arguments also available, like 'generate', 'serve', 'test', 'lint', 'format')
+3. `cd mynewapplication` (After previous command new folder will be created as 'mynewapplication').
+4. `npm install` (Since there will be a file package.json, which will keep all dependencies. The above command will install all dependencies with this command)
+5. `ng serve` (Agular using HTTP as service, so by calling 'serve' command with '-o/-open' will serve the page in new browser window/tab. By default 4200 port will be used to serve).
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to [Bootstrap Application](http://localhost:4200/). The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
