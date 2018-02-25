@@ -69,6 +69,10 @@ export class ProductListComponent implements OnInit {
         this.showImage = !this.showImage;
     }
 
+    OnRatingClicked(args): void {
+        console.log(`Rating clicked and captured at parent: ${args}`);
+    }
+
     private performFilter(productText: string): IProduct[] {
         productText = productText.toLocaleLowerCase();
         return this.products.filter((product: IProduct) => {
@@ -80,5 +84,4 @@ export class ProductListComponent implements OnInit {
     ngOnInit(): void {
         console.log('OnInit of ProductListComponent executed');
     }
-
 }
