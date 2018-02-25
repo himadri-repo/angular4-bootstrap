@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
+import { ProductService } from './product.service';
 
 @Component({
     moduleId: module.id,
@@ -8,16 +9,21 @@ import { IProduct } from './product';
     styleUrls: ['product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+    // private _productService: ProductService;
+    constructor(private _productService: ProductService) {
+        // this.filteredProducts = this.products;
+        // this.listFilter = 'product';
+        // this._productService = productService;
 
-    constructor() {
-        this.filteredProducts = this.products;
-        this.listFilter = 'product';
+        // console.log(this._productService);
+        // this.products = this._productService.getProducts();
     }
 
     title: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
+    errorMessage: string = '';
     // listFilter: string = 'product';
 
     _listFilter: string = '';
@@ -31,39 +37,40 @@ export class ProductListComponent implements OnInit {
     }
 
     filteredProducts: IProduct[];
-    products: IProduct[] = [{
-        ID: 1,
-        Name: 'Product 1',
-        Code: 'GRM-A001',
-        IsAvailable: true,
-        Price: 35.5,
-        Rating: 4.4,
-        ImageURL: 'https://openclipart.org/image/2400px/svg_to_png/247661/WomanInSaree5.png'
-    }, {
-        ID: 1,
-        Name: 'Product 2',
-        Code: 'GRM-A002',
-        IsAvailable: true,
-        Price: 30,
-        Rating: 4.9,
-        ImageURL: 'https://openclipart.org/image/2400px/svg_to_png/289835/croquis_from_americansystemof00merw.png'
-    }, {
-        ID: 1,
-        Name: 'Product 3',
-        Code: 'TOY-A003',
-        IsAvailable: false,
-        Price: 42,
-        Rating: 3.2,
-        ImageURL: 'https://openclipart.org/image/2400px/svg_to_png/261071/ManInCape.png'
-    }, {
-        ID: 1,
-        Name: 'Product 4',
-        Code: 'FOOD-A004',
-        IsAvailable: true,
-        Price: 49,
-        Rating: 2.5,
-        ImageURL: 'https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png'
-    }];
+    products: IProduct[] = [];
+    // [{
+    //     ID: 1,
+    //     Name: 'Product 1',
+    //     Code: 'GRM-A001',
+    //     IsAvailable: true,
+    //     Price: 35.5,
+    //     Rating: 4.4,
+    //     ImageURL: 'https://openclipart.org/image/2400px/svg_to_png/247661/WomanInSaree5.png'
+    // }, {
+    //     ID: 1,
+    //     Name: 'Product 2',
+    //     Code: 'GRM-A002',
+    //     IsAvailable: true,
+    //     Price: 30,
+    //     Rating: 4.9,
+    //     ImageURL: 'https://openclipart.org/image/2400px/svg_to_png/289835/croquis_from_americansystemof00merw.png'
+    // }, {
+    //     ID: 1,
+    //     Name: 'Product 3',
+    //     Code: 'TOY-A003',
+    //     IsAvailable: false,
+    //     Price: 42,
+    //     Rating: 3.2,
+    //     ImageURL: 'https://openclipart.org/image/2400px/svg_to_png/261071/ManInCape.png'
+    // }, {
+    //     ID: 1,
+    //     Name: 'Product 4',
+    //     Code: 'FOOD-A004',
+    //     IsAvailable: true,
+    //     Price: 49,
+    //     Rating: 2.5,
+    //     ImageURL: 'https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png'
+    // }];
 
     toggleImage(): void {
         this.showImage = !this.showImage;
@@ -83,5 +90,12 @@ export class ProductListComponent implements OnInit {
 
     ngOnInit(): void {
         console.log('OnInit of ProductListComponent executed');
+        this._productService.getProducts()
+                    .subscribe(products => {
+                            this.products = products;
+                            this.filteredProducts = this.products;
+                            this.listFilter = '';
+                            console.log(`# of Products ${this.products.length}`);
+                        }, error => this.errorMessage = <any>error);
     }
 }

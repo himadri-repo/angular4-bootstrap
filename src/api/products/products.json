@@ -1,0 +1,89 @@
+[{
+    "ID": 1,
+    "Name": "Lagings",
+    "Code": "GRM-L001",
+    "IsAvailable": true,
+    "Price": 120.50,
+    "Rating": 4.1,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/247661/WomanInSaree5.png"
+}, {
+    "ID": 2,
+    "Name": "Sarees",
+    "Code": "GRM-S001",
+    "IsAvailable": true,
+    "Price": 450,
+    "Rating": 3.7,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/289835/croquis_from_americansystemof00merw.png"
+}, {
+    "ID": 3,
+    "Name": "Kurties",
+    "Code": "GRM-K001",
+    "IsAvailable": true,
+    "Price": 190.5,
+    "Rating": 2.4,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/261071/ManInCape.png"
+}, {
+    "ID": 5,
+    "Name": "Shirts",
+    "Code": "GRM-S002",
+    "IsAvailable": true,
+    "Price": 250,
+    "Rating": 2.0,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png"
+}, {
+    "ID": 6,
+    "Name": "Panjabi",
+    "Code": "GRM-P001",
+    "IsAvailable": true,
+    "Price": 175.5,
+    "Rating": 1.6,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png"
+}, {
+    "ID": 7,
+    "Name": "Shorts",
+    "Code": "GRM-S003",
+    "IsAvailable": true,
+    "Price": 35.5,
+    "Rating": 4.7,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png"
+}, {
+    "ID": 8,
+    "Name": "Inner Items",
+    "Code": "GRM-I001",
+    "IsAvailable": true,
+    "Price": 210.5,
+    "Rating": 4.1,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png"
+}, {
+    "ID": 9,
+    "Name": "Barmuda",
+    "Code": "GRM-B001",
+    "IsAvailable": true,
+    "Price": 89.5,
+    "Rating": 4.4,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png"
+}, {
+    "ID": 10,
+    "Name": "Suites",
+    "Code": "GRM-S004",
+    "IsAvailable": true,
+    "Price": 3250,
+    "Rating": 3.5,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png"
+}, {
+    "ID": 11,
+    "Name": "Kurtas",
+    "Code": "GRM-K002",
+    "IsAvailable": true,
+    "Price": 120.5,
+    "Rating": 3.9,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png"
+}, {
+    "ID": 12,
+    "Name": "Pajama",
+    "Code": "GRM-P002",
+    "IsAvailable": true,
+    "Price": 65.5,
+    "Rating": 3.4,
+    "ImageURL": "https://openclipart.org/image/2400px/svg_to_png/283585/Farthingale2.png"
+}]
