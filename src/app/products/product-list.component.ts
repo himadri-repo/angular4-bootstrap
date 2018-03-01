@@ -19,14 +19,14 @@ export class ProductListComponent implements OnInit {
         // this.products = this._productService.getProducts();
     }
 
-    title: string = 'Product List';
-    imageWidth: number = 50;
-    imageMargin: number = 2;
-    showImage: boolean = false;
-    errorMessage: string = '';
+    title = 'Product List';
+    imageWidth = 50;
+    imageMargin = 2;
+    showImage = false;
+    errorMessage = '';
     // listFilter: string = 'product';
 
-    _listFilter: string = '';
+    _listFilter = '';
     get listFilter(): string {
         return this._listFilter;
     }
@@ -96,6 +96,6 @@ export class ProductListComponent implements OnInit {
                             this.filteredProducts = this.products;
                             this.listFilter = '';
                             console.log(`# of Products ${this.products.length}`);
-                        }, error => this.errorMessage = <any>error);
+                        }, error => this.errorMessage = error);
     }
 }

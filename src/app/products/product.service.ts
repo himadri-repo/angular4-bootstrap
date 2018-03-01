@@ -7,7 +7,8 @@ import 'rxjs/add/operator/do';
 
 @Injectable()
 export class ProductService {
-    private _productURL = './api/products/products.json';
+    // private _productURL = './api/products/products.json';
+    private _productURL = 'http://localhost:3000/products';
     constructor(private _http: HttpClient) {
 
     }
